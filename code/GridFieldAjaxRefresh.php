@@ -1,8 +1,10 @@
 <?php
+
 /**
- * This component provides a checkbox which when checked enables drag-and-drop re-ordering of elements displayed in a {@link GridField}
+ * This component provides a automatic refreshing of a gridfield at a particular interval, or manual refreshing with
+ * a "refresh" button {@link GridField}
  *
- * @package forms
+ * @package GridFieldAjaxRefresh
  */
 class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 
@@ -41,4 +43,5 @@ class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 	}
 
 }
+
 ?>
