@@ -12,7 +12,8 @@ class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 	protected $autoRefresh;
 
 	/**
-	 * @param String $sortColumn Column that should be used to update the sort information
+	 * @param int $refreshDelay The Delay in milliseconds between refreshes
+	 * @param bool $autoRefresh True to enable automatic refresh, False to use manual refresh with a button
 	 */
 	public function __construct($refreshDelay = 1000, $autoRefresh = true) {
 		$this->refreshDelay = $refreshDelay;
