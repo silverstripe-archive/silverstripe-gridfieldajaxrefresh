@@ -25,16 +25,14 @@ class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 	 * @return Array Map where the keys are fragment names and the values are pieces of HTML to add to these fragments.
 	 */
 	public function getHTMLFragments($gridField) {
-		$data = array('RefreshDelay' => $this->refreshDelay,
-					'AutoRefresh' => $this->autoRefresh);
-
-		$forTemplate = new ArrayData($data);
-
-
-		//Inject Requirements
 		Requirements::css('gridfieldajaxrefresh/css/GridFieldAjaxRefresh.css');
 		Requirements::javascript('gridfieldajaxrefresh/javascript/GridFieldAjaxRefresh.js');
 
+		$data = array('RefreshDelay' => $this->refreshDelay,
+					'AutoRefresh' => $this->autoRefresh,
+					'GridFieldID' => $gridField->ID());
+
+		$forTemplate = new ArrayData($data);
 		$args = array(
 			'ID' => $gridField->ID(),
 		);
