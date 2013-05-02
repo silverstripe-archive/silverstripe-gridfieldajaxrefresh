@@ -4,9 +4,8 @@
 <div class="refresh-grid-field-id hide">$GridFieldID</div>
 <% else %>
 <div class="auto-refresh-button">
-	<button name="action_refresh" value="Refresh" class="" id="action_refresh" role="button" aria-disabled="false">
-		<span class="ui-button-icon-primary ui-icon btn-icon-arrow-circle-double"></span>
-		<span class="ui-button-text"><%t GridFieldAjaxRefresh.REFRESH 'Refresh' %></span>
+	<button name="action_refresh" value="<%t GridFieldAjaxRefresh.REFRESH 'Refresh' %>" class="" data-icon="arrow-circle-double" id="action_refresh" role="button" aria-disabled="false">
+		<%t GridFieldAjaxRefresh.REFRESH 'Refresh' %>
 	</button>
 </div>
 <% end_if %>
