@@ -12,12 +12,18 @@ class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 	protected $autoRefresh;
 
 	/**
+	 * The HTML fragment to write this component into
+	 */
+	protected $targetFragment;
+
+	/**
 	 * @param int $refreshDelay The Delay in milliseconds between refreshes
 	 * @param bool $autoRefresh True to enable automatic refresh, False to use manual refresh with a button
 	 */
-	public function __construct($refreshDelay = 1000, $autoRefresh = true) {
+	public function __construct($refreshDelay = 1000, $autoRefresh = true, $targetFragment = 'before') {
 		$this->refreshDelay = $refreshDelay;
 		$this->autoRefresh = $autoRefresh;
+		$this->targetFragment = $targetFragment;
 	}
 
 	/**
@@ -38,7 +44,9 @@ class GridFieldAjaxRefresh implements GridField_HTMLProvider {
 			'ID' => $gridField->ID(),
 		);
 
-		return array('header' => $forTemplate->renderWith('GridFieldAjaxRefresh_Header', $args));
+		return array(
+			$this->targetFragment => $forTemplate->renderWith('GridFieldAjaxRefresh_Header', $args)
+		);
 	}
 
 }
