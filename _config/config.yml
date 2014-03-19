@@ -1,0 +1,13 @@
+---
+Name: gridfieldajaxrefresh
+Before: 'mysite/*'
+After: 'framework/*','cms/*'
+---
+
+GridFieldConfig_Base:
+  extensions:
+    - GridFieldAjaxRefresh_Base
+
+GridFieldConfig_RecordEditor:
+  extensions:
+    - GridFieldAjaxRefresh_RecordEditor
