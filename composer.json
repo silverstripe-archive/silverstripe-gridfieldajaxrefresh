@@ -1,5 +1,5 @@
 {
-	"name": "wakes/gridfieldajaxrefresh",
+	"name": "silverstripe/gridfieldajaxrefresh",
 	"description": "Adds the ability to either automatically or manually refresh a SilverStripe GridField",
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "gridfield", "ajax", "refresh", "auto-refresh", "automatic"],
@@ -8,10 +8,6 @@
 	{
 		"name": "Julian Seidenberg",
 		"email": "julian@silverstripe.com"
-	},
-	{	
-		"name": "Steve Wake",
-		"email": "wakes@digitalhod.net"
 	}
 	],
 	"require":
