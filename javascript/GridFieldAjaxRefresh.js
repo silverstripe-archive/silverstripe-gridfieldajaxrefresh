@@ -73,7 +73,7 @@
 			onadd: function() {
 				this._super();
 
-				var gridID = $('.refresh-grid-field-id').html();
+				var gridID = $('.refresh-grid-field-id', $(this)).html();
 				var grid = $('#'+gridID);
 
 				//using auto-refresh, not a button
