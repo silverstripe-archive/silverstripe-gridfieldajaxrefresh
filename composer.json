@@ -4,6 +4,7 @@
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "gridfield", "ajax", "refresh", "auto-refresh", "automatic"],
 	"license": "BSD-3-Clause",
+    "minimum-stability": "dev",
 	"authors": [
 	{
 		"name": "Julian Seidenberg",
@@ -12,6 +13,6 @@
 	],
 	"require":
 	{
-		"silverstripe/framework": "~3.0"
+		"silverstripe/framework": ">=3.0"
 	}
 }
