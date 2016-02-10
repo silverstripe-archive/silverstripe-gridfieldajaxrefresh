@@ -4,7 +4,7 @@ GridFieldAjaxRefresh
 Adds the ability to either automatically or manually refresh a SilverStripe GridField
 
 ## Requirements
-* SilverStripe 3.0
+* SilverStripe 3.x
 
 ## Installation
 * Download the module from here https://github.com/silverstripe-labs/silverstripe-gridfieldajaxrefresh
