@@ -5,18 +5,32 @@
  *
  * @package GridFieldAjaxRefresh
  */
-class GridFieldAjaxRefresh_Base extends Extension {
+class GridFieldAjaxRefresh_Base extends Extension
+{
 
-	public function updateConfig() {
-		$this->owner->addComponent(new GridFieldAjaxRefresh(5000, false));
+	public function updateConfig()
+	{
+		$this->owner->addComponent(
+			new GridFieldAjaxRefresh(
+				Config::inst()->get('GridFieldAjaxRefresh', 'auto_refresh_interval'),
+				Config::inst()->get('GridFieldAjaxRefresh', 'auto_refresh_enabled')
+			)
+		);
 	}
 
 }
 
-class GridFieldAjaxRefresh_RecordEditor extends Extension {
+class GridFieldAjaxRefresh_RecordEditor extends Extension
+{
 
-	public function updateConfig() {
-		$this->owner->addComponent(new GridFieldAjaxRefresh(5000, false));
+	public function updateConfig()
+	{
+		$this->owner->addComponent(
+			new GridFieldAjaxRefresh(
+				Config::inst()->get('GridFieldAjaxRefresh', 'auto_refresh_interval'),
+				Config::inst()->get('GridFieldAjaxRefresh', 'auto_refresh_enabled')
+			)
+		);
 	}
 
 }
