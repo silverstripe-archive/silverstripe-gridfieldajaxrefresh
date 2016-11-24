@@ -9,6 +9,9 @@
 class GridFieldAjaxRefresh implements GridField_HTMLProvider
 {
 
+    private static $auto_refresh_enabled = false;
+    private static $auto_refresh_interval = 180000; // 180000 = 3 min
+
     protected $refreshDelay;    //in milliseconds: 1000 ms = 1 second
     protected $autoRefresh;
 

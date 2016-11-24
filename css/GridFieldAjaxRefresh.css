@@ -1,3 +1,4 @@
 .cms .ss-gridfield > div.auto-refresh-button {
-	margin-bottom: 12px;
+	float: left;
+	margin: 0 5px;
 }
